@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O5m-1n-Cb9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="1hX-2l-a2X">
+            <objects>
+                <viewController storyboardIdentifier="RootViewController" id="O5m-1n-Cb9" customClass="RootViewController" customModule="Lacak_Jajan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fP7-sE-n01"/>
+                        <viewControllerLayoutGuide type="bottom" id="eiS-5U-DLV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a8V-C7-FHc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="qgo-RW-MtN" kind="show" identifier="splashSegue" id="YQZ-OH-NLb"/>
+                        <segue destination="apw-Ht-yMp" kind="show" identifier="taskSegue" id="RxW-4u-Qbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkm-9O-mwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308" y="88"/>
+        </scene>
+        <!--SplashViewController-->
+        <scene sceneID="hzK-Xg-szj">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SplashViewController" storyboardName="Splash" referencedIdentifier="SplashViewController" id="qgo-RW-MtN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2d-dO-pom" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="41"/>
+        </scene>
+        <!--TaskViewController-->
+        <scene sceneID="a0E-aB-1vv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TaskViewController" storyboardName="Task" referencedIdentifier="TaskViewController" id="apw-Ht-yMp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvE-8b-WSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="116"/>
+        </scene>
+    </scenes>
+</document>

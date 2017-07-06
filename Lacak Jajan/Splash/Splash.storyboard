@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wkM-PI-AYs">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplashViewController-->
+        <scene sceneID="dNl-LV-Q0X">
+            <objects>
+                <viewController restorationIdentifier="SplashViewController" storyboardIdentifier="SplashViewController" title="SplashViewController" id="wkM-PI-AYs" customClass="SplashViewController" customModule="Lacak_Jajan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D7L-dE-meY"/>
+                        <viewControllerLayoutGuide type="bottom" id="rgQ-f0-WsP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cBF-cs-Wf4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneyback" translatesAutoresizingMaskIntoConstraints="NO" id="0T2-gD-DbS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lef-Fx-DIs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVR-uf-Xq3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="bgButtonTapped:" destination="wkM-PI-AYs" eventType="touchUpInside" id="LJW-eV-zIB"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-notext" translatesAutoresizingMaskIntoConstraints="NO" id="beg-Mf-YPB">
+                                        <rect key="frame" x="-14" y="-14" width="342" height="228"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lacak Jajan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oco-fJ-yMz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.024064794182777405" blue="0.0" alpha="0.22538473618090452" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="48"/>
+                                        <color key="textColor" red="0.2470588235" green="0.76470588240000004" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lacak Jajan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pH-mx-t9Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="48"/>
+                                        <color key="textColor" red="0.2470588235" green="0.76470588240000004" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lacak Jajan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnW-84-u9n">
+                                        <rect key="frame" x="-2" y="-2" width="320" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="48"/>
+                                        <color key="textColor" red="0.2470588235" green="0.76470588240000004" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lacak Jajan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGf-kw-f2E">
+                                        <rect key="frame" x="-1" y="-1" width="320" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="48"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6UZ-Sr-edq">
+                                        <rect key="frame" x="0.0" y="304" width="320" height="264"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register to Lacak Jajan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-sU-Hkp">
+                                                <rect key="frame" x="16" y="8" width="288" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.48813450339999997" green="0.57045912740000004" blue="0.47524583339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8yl-L9-ttG">
+                                                <rect key="frame" x="16" y="47" width="288" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wkM-PI-AYs" id="7cK-9O-zAe"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uwe-EP-bAy">
+                                                <rect key="frame" x="16" y="85" width="288" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wkM-PI-AYs" id="ub3-IT-agk"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWP-0v-i8Y">
+                                                <rect key="frame" x="16" y="132" width="288" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wkM-PI-AYs" id="QMR-PN-Pzm"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPz-yx-OX5">
+                                                <rect key="frame" x="16" y="170" width="288" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wkM-PI-AYs" id="80t-Kj-Em8"/>
+                                                </connections>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-pj-tu7">
+                                                <rect key="frame" x="16" y="123" width="288" height="1"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkh-xZ-6GM">
+                                                <rect key="frame" x="16" y="208" width="288" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.73731011150000003" green="0.72157609460000005" blue="0.74106138939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="REGISTER">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="regRegisterButtonTapped:" destination="wkM-PI-AYs" eventType="touchUpInside" id="A0S-kG-Vqc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0037480616010725498" green="0.012016629800200462" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="264" id="SLD-HS-xxF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVM-zY-sZ5">
+                                        <rect key="frame" x="0.0" y="389" width="320" height="179"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRt-45-b68">
+                                                <rect key="frame" x="16" y="47" width="288" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wkM-PI-AYs" id="67b-yB-sPV"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6f-j4-onH">
+                                                <rect key="frame" x="16" y="85" width="288" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="wkM-PI-AYs" id="xoe-NB-216"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In to Lacak Jajan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dY-ID-oKP">
+                                                <rect key="frame" x="16" y="8" width="288" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.48813450336456299" green="0.57045912742614746" blue="0.47524583339691162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc1-AO-Paf">
+                                                <rect key="frame" x="16" y="123" width="288" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.25098133090000002" green="0.25097945329999999" blue="0.25877648590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="LOGIN">
+                                                    <color key="titleColor" red="0.72153025869999998" green="0.72159534690000005" blue="0.72147595880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logLoginButtonTapped:" destination="wkM-PI-AYs" eventType="touchUpInside" id="7N4-p0-4Vr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0037480616010725498" green="0.012016629800200462" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="179" id="1o0-Y4-gya"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-cF-hmX">
+                                        <rect key="frame" x="0.0" y="448" width="320" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-E9-cV9">
+                                                <rect key="frame" x="16" y="64" width="288" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.25145055623063567" green="0.25198466527813312" blue="0.26013509726524353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <state key="normal" title="LOG IN WITH FACEBOOK">
+                                                    <color key="titleColor" red="0.76074403524398804" green="0.76081240177154541" blue="0.76068693399429321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24l-eZ-jd1">
+                                                <rect key="frame" x="16" y="16" width="140" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.73731011152267456" green="0.72157609462738037" blue="0.74106138944625854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="REGISTER">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="reglogRegisterButtonTapped:" destination="wkM-PI-AYs" eventType="touchUpInside" id="73Y-gw-JKh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="636-bN-Bcw">
+                                                <rect key="frame" x="164" y="16" width="140" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.25098133090000002" green="0.25097945329999999" blue="0.25877648590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="LOGIN">
+                                                    <color key="titleColor" red="0.72153025869999998" green="0.72159534690000005" blue="0.72147595880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="reglogLoginButtonTapped:" destination="wkM-PI-AYs" eventType="touchUpInside" id="7u5-OK-rcu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0038474933244287968" green="0.015703113749623299" blue="1.6500523997819982e-05" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="0cg-B3-kZf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="T0f-cF-hmX" firstAttribute="leading" secondItem="lef-Fx-DIs" secondAttribute="leading" id="A6L-ZH-OY7"/>
+                                    <constraint firstAttribute="bottom" secondItem="T0f-cF-hmX" secondAttribute="bottom" id="EFg-c6-vm9"/>
+                                    <constraint firstAttribute="trailing" secondItem="6UZ-Sr-edq" secondAttribute="trailing" id="J8h-3b-5B1"/>
+                                    <constraint firstAttribute="bottom" secondItem="eVM-zY-sZ5" secondAttribute="bottom" id="NC6-FX-stm"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0f-cF-hmX" secondAttribute="trailing" id="OF0-Sy-t04"/>
+                                    <constraint firstItem="6UZ-Sr-edq" firstAttribute="leading" secondItem="lef-Fx-DIs" secondAttribute="leading" id="SBO-9W-CGE"/>
+                                    <constraint firstItem="eVM-zY-sZ5" firstAttribute="leading" secondItem="lef-Fx-DIs" secondAttribute="leading" id="YIU-K3-CQL"/>
+                                    <constraint firstAttribute="bottom" secondItem="6UZ-Sr-edq" secondAttribute="bottom" id="ei5-Co-M3m"/>
+                                    <constraint firstAttribute="trailing" secondItem="eVM-zY-sZ5" secondAttribute="trailing" id="tog-tD-XOG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lef-Fx-DIs" secondAttribute="trailing" id="2gc-in-23P"/>
+                            <constraint firstAttribute="trailing" secondItem="0T2-gD-DbS" secondAttribute="trailing" id="NJA-Ul-Hea"/>
+                            <constraint firstItem="0T2-gD-DbS" firstAttribute="top" secondItem="cBF-cs-Wf4" secondAttribute="top" id="Pqg-Cq-CGD"/>
+                            <constraint firstItem="rgQ-f0-WsP" firstAttribute="top" secondItem="lef-Fx-DIs" secondAttribute="bottom" id="UJt-Ym-Svx"/>
+                            <constraint firstItem="rgQ-f0-WsP" firstAttribute="top" secondItem="0T2-gD-DbS" secondAttribute="bottom" id="Uax-pj-vMD"/>
+                            <constraint firstItem="lef-Fx-DIs" firstAttribute="leading" secondItem="cBF-cs-Wf4" secondAttribute="leading" id="fAT-ea-dfh"/>
+                            <constraint firstItem="lef-Fx-DIs" firstAttribute="top" secondItem="cBF-cs-Wf4" secondAttribute="top" id="uG8-rW-MGa"/>
+                            <constraint firstItem="0T2-gD-DbS" firstAttribute="leading" secondItem="cBF-cs-Wf4" secondAttribute="leading" id="wyS-8z-x6V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomViewLayout" destination="UJt-Ym-Svx" id="vrG-zF-yir"/>
+                        <outlet property="loginPasswordText" destination="r6f-j4-onH" id="epR-3I-Hep"/>
+                        <outlet property="loginUsernameText" destination="LRt-45-b68" id="Ny3-TR-rYj"/>
+                        <outlet property="loginView" destination="eVM-zY-sZ5" id="8ei-td-E2P"/>
+                        <outlet property="regEmailText" destination="uwe-EP-bAy" id="8Ke-45-yAf"/>
+                        <outlet property="regLastNameText" destination="8yl-L9-ttG" id="dqM-J6-0Re"/>
+                        <outlet property="regLogView" destination="T0f-cF-hmX" id="aCe-ip-8cH"/>
+                        <outlet property="regPasswordText" destination="yPz-yx-OX5" id="gOm-IB-P2m"/>
+                        <outlet property="regUsernameText" destination="bWP-0v-i8Y" id="QSp-Uc-7mx"/>
+                        <outlet property="registerView" destination="6UZ-Sr-edq" id="Jud-ht-ahw"/>
+                        <segue destination="i5b-mL-Glj" kind="show" identifier="taskSegue" id="WdW-Is-D3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGs-LH-ScU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.25" y="118.30985915492958"/>
+        </scene>
+        <!--TaskViewController-->
+        <scene sceneID="HJn-xM-5R7">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TaskViewController" storyboardName="Task" referencedIdentifier="TaskViewController" id="i5b-mL-Glj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZd-Cv-ocp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Line-1" width="12" height="2"/>
+        <image name="logo-notext" width="706" height="522"/>
+        <image name="moneyback" width="640" height="960"/>
+    </resources>
+</document>

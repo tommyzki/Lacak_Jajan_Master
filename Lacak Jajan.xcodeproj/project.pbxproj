@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950DE9761EB874E3001D6BD5 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DE9751EB874E3001D6BD5 /* Splash.storyboard */; };
+		950DE97C1EB8757F001D6BD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 950DE9791EB8757F001D6BD5 /* Default-568h@2x.png */; };
+		950DE97D1EB8757F001D6BD5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 950DE97A1EB8757F001D6BD5 /* Default.png */; };
+		950DE97E1EB8757F001D6BD5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 950DE97B1EB8757F001D6BD5 /* Default@2x.png */; };
+		950DE9801EB875B6001D6BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DE97F1EB875B6001D6BD5 /* Main.storyboard */; };
+		950DE9821EB875E3001D6BD5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DE9811EB875E3001D6BD5 /* RootViewController.swift */; };
+		95168F9F1EDBB599002EC1AE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95168F9E1EDBB599002EC1AE /* HistoryViewController.swift */; };
+		95168FA11EDBB5C4002EC1AE /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95168FA01EDBB5C4002EC1AE /* HistoryCell.swift */; };
+		954CA7971ECFDB1400EF1618 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954CA7961ECFDB1400EF1618 /* Task.storyboard */; };
+		95A9E0021EDD525D00D1DCF3 /* bg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A9E0011EDD525D00D1DCF3 /* bg.swift */; };
+		95A9E0041EDED77200D1DCF3 /* JajanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A9E0031EDED77200D1DCF3 /* JajanViewController.swift */; };
+		95B379971EC6A090009C1385 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B379961EC6A090009C1385 /* Users.swift */; };
+		95C68BE71EE56A730092F512 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C68BE61EE56A730092F512 /* TransferViewController.swift */; };
+		95C68BE91EE56C050092F512 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C68BE81EE56C050092F512 /* SplashViewController.swift */; };
+		95C68BEB1EE57EF40092F512 /* TarikDuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C68BEA1EE57EF40092F512 /* TarikDuitViewController.swift */; };
+		95C68BED1EE57F060092F512 /* NabungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C68BEC1EE57F060092F512 /* NabungViewController.swift */; };
+		95C68BEF1EE5CDAE0092F512 /* DapetDuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C68BEE1EE5CDAE0092F512 /* DapetDuitViewController.swift */; };
+		95C68BF11EE6FAFF0092F512 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C68BF01EE6FAFF0092F512 /* Extensions.swift */; };
+		95D9812F1EB3158C00584DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9812E1EB3158C00584DFE /* AppDelegate.swift */; };
+		95D981361EB3158C00584DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D981351EB3158C00584DFE /* Assets.xcassets */; };
+		95D981391EB3158C00584DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D981371EB3158C00584DFE /* LaunchScreen.storyboard */; };
+		95DEB1371EC6B24C00B59AED /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEB1361EC6B24C00B59AED /* TaskViewController.swift */; };
+		95F082401EE82BF200C5C870 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0823F1EE82BF200C5C870 /* SettingViewController.swift */; };
+		95FDB38D1EEA43CE0099EA1E /* Historys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FDB38C1EEA43CD0099EA1E /* Historys.swift */; };
+		95FDB38F1EEA9CC00099EA1E /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FDB38E1EEA9CC00099EA1E /* HistoryDetailsViewController.swift */; };
+		AA6EE680A89590F3FD5F3F21 /* Pods_Lacak_Jajan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5B83D74EF4B10FBFDCD020 /* Pods_Lacak_Jajan.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C5B83D74EF4B10FBFDCD020 /* Pods_Lacak_Jajan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lacak_Jajan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E62B06946B48C6A243356A /* Pods-Lacak Jajan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lacak Jajan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lacak Jajan/Pods-Lacak Jajan.release.xcconfig"; sourceTree = "<group>"; };
+		950DE9751EB874E3001D6BD5 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = Splash/Splash.storyboard; sourceTree = "<group>"; };
+		950DE9791EB8757F001D6BD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		950DE97A1EB8757F001D6BD5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		950DE97B1EB8757F001D6BD5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		950DE97F1EB875B6001D6BD5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/Main.storyboard; sourceTree = "<group>"; };
+		950DE9811EB875E3001D6BD5 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Main/RootViewController.swift; sourceTree = "<group>"; };
+		95168F9E1EDBB599002EC1AE /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Task/HistoryViewController.swift; sourceTree = "<group>"; };
+		95168FA01EDBB5C4002EC1AE /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCell.swift; path = Task/HistoryCell.swift; sourceTree = "<group>"; };
+		954CA7961ECFDB1400EF1618 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Task.storyboard; path = Task/Task.storyboard; sourceTree = "<group>"; };
+		95A9E0011EDD525D00D1DCF3 /* bg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = bg.swift; path = Model/bg.swift; sourceTree = "<group>"; };
+		95A9E0031EDED77200D1DCF3 /* JajanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JajanViewController.swift; path = Task/JajanViewController.swift; sourceTree = "<group>"; };
+		95B379961EC6A090009C1385 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Model/Users.swift; sourceTree = "<group>"; };
+		95C68BE61EE56A730092F512 /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransferViewController.swift; path = Task/TransferViewController.swift; sourceTree = "<group>"; };
+		95C68BE81EE56C050092F512 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = Splash/SplashViewController.swift; sourceTree = "<group>"; };
+		95C68BEA1EE57EF40092F512 /* TarikDuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TarikDuitViewController.swift; path = Task/TarikDuitViewController.swift; sourceTree = "<group>"; };
+		95C68BEC1EE57F060092F512 /* NabungViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NabungViewController.swift; path = Task/NabungViewController.swift; sourceTree = "<group>"; };
+		95C68BEE1EE5CDAE0092F512 /* DapetDuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DapetDuitViewController.swift; path = Task/DapetDuitViewController.swift; sourceTree = "<group>"; };
+		95C68BF01EE6FAFF0092F512 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Main/Extensions.swift; sourceTree = "<group>"; };
+		95D9812B1EB3158C00584DFE /* Lacak Jajan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lacak Jajan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9812E1EB3158C00584DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95D981351EB3158C00584DFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D981381EB3158C00584DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95D9813A1EB3158C00584DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95DEB1361EC6B24C00B59AED /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskViewController.swift; path = Task/TaskViewController.swift; sourceTree = "<group>"; };
+		95F0823F1EE82BF200C5C870 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Task/SettingViewController.swift; sourceTree = "<group>"; };
+		95FDB38C1EEA43CD0099EA1E /* Historys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historys.swift; path = Model/Historys.swift; sourceTree = "<group>"; };
+		95FDB38E1EEA9CC00099EA1E /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryDetailsViewController.swift; path = Task/HistoryDetailsViewController.swift; sourceTree = "<group>"; };
+		9839B747FC5BBA76B187A0A9 /* Pods-Lacak Jajan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lacak Jajan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lacak Jajan/Pods-Lacak Jajan.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95D981281EB3158C00584DFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA6EE680A89590F3FD5F3F21 /* Pods_Lacak_Jajan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		420EFD7C87005BE91A7BE966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C5B83D74EF4B10FBFDCD020 /* Pods_Lacak_Jajan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		950DE9731EB874B8001D6BD5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				950DE97F1EB875B6001D6BD5 /* Main.storyboard */,
+				950DE9811EB875E3001D6BD5 /* RootViewController.swift */,
+				95C68BF01EE6FAFF0092F512 /* Extensions.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		950DE9741EB874C5001D6BD5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				950DE9751EB874E3001D6BD5 /* Splash.storyboard */,
+				95C68BE81EE56C050092F512 /* SplashViewController.swift */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		95457E4F1EC69AEC0016BFA3 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				954CA7961ECFDB1400EF1618 /* Task.storyboard */,
+				95DEB1361EC6B24C00B59AED /* TaskViewController.swift */,
+				95168F9E1EDBB599002EC1AE /* HistoryViewController.swift */,
+				95168FA01EDBB5C4002EC1AE /* HistoryCell.swift */,
+				95FDB38E1EEA9CC00099EA1E /* HistoryDetailsViewController.swift */,
+				95A9E0031EDED77200D1DCF3 /* JajanViewController.swift */,
+				95C68BE61EE56A730092F512 /* TransferViewController.swift */,
+				95C68BEA1EE57EF40092F512 /* TarikDuitViewController.swift */,
+				95C68BEC1EE57F060092F512 /* NabungViewController.swift */,
+				95C68BEE1EE5CDAE0092F512 /* DapetDuitViewController.swift */,
+				95F0823F1EE82BF200C5C870 /* SettingViewController.swift */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		95457E501EC69D130016BFA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95A9E0011EDD525D00D1DCF3 /* bg.swift */,
+				95B379961EC6A090009C1385 /* Users.swift */,
+				95FDB38C1EEA43CD0099EA1E /* Historys.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		95D981221EB3158C00584DFE = {
+			isa = PBXGroup;
+			children = (
+				95D9812D1EB3158C00584DFE /* Lacak Jajan */,
+				95D9812C1EB3158C00584DFE /* Products */,
+				9E52F07E916D988CBA43A84B /* Pods */,
+				420EFD7C87005BE91A7BE966 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		95D9812C1EB3158C00584DFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95D9812B1EB3158C00584DFE /* Lacak Jajan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95D9812D1EB3158C00584DFE /* Lacak Jajan */ = {
+			isa = PBXGroup;
+			children = (
+				95457E501EC69D130016BFA3 /* Model */,
+				95457E4F1EC69AEC0016BFA3 /* Task */,
+				950DE9741EB874C5001D6BD5 /* Splash */,
+				950DE9731EB874B8001D6BD5 /* Main */,
+				95D9812E1EB3158C00584DFE /* AppDelegate.swift */,
+				95D981351EB3158C00584DFE /* Assets.xcassets */,
+				95D981371EB3158C00584DFE /* LaunchScreen.storyboard */,
+				95D9813A1EB3158C00584DFE /* Info.plist */,
+				950DE9791EB8757F001D6BD5 /* Default-568h@2x.png */,
+				950DE97A1EB8757F001D6BD5 /* Default.png */,
+				950DE97B1EB8757F001D6BD5 /* Default@2x.png */,
+			);
+			path = "Lacak Jajan";
+			sourceTree = "<group>";
+		};
+		9E52F07E916D988CBA43A84B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9839B747FC5BBA76B187A0A9 /* Pods-Lacak Jajan.debug.xcconfig */,
+				58E62B06946B48C6A243356A /* Pods-Lacak Jajan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95D9812A1EB3158C00584DFE /* Lacak Jajan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9813D1EB3158C00584DFE /* Build configuration list for PBXNativeTarget "Lacak Jajan" */;
+			buildPhases = (
+				1BC7FF68C75EE97EE71DCEAB /* [CP] Check Pods Manifest.lock */,
+				95D981271EB3158C00584DFE /* Sources */,
+				95D981281EB3158C00584DFE /* Frameworks */,
+				95D981291EB3158C00584DFE /* Resources */,
+				F11D733DE73D0AD9405420C0 /* [CP] Embed Pods Frameworks */,
+				A901E0B0DEBE776F45B54C69 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lacak Jajan";
+			productName = "Lacak Jajan";
+			productReference = 95D9812B1EB3158C00584DFE /* Lacak Jajan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95D981231EB3158C00584DFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Tommyzki;
+				TargetAttributes = {
+					95D9812A1EB3158C00584DFE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = YT7DMFF6ER;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 95D981261EB3158C00584DFE /* Build configuration list for PBXProject "Lacak Jajan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95D981221EB3158C00584DFE;
+			productRefGroup = 95D9812C1EB3158C00584DFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95D9812A1EB3158C00584DFE /* Lacak Jajan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95D981291EB3158C00584DFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950DE9801EB875B6001D6BD5 /* Main.storyboard in Resources */,
+				954CA7971ECFDB1400EF1618 /* Task.storyboard in Resources */,
+				950DE97E1EB8757F001D6BD5 /* Default@2x.png in Resources */,
+				95D981391EB3158C00584DFE /* LaunchScreen.storyboard in Resources */,
+				950DE97C1EB8757F001D6BD5 /* Default-568h@2x.png in Resources */,
+				95D981361EB3158C00584DFE /* Assets.xcassets in Resources */,
+				950DE9761EB874E3001D6BD5 /* Splash.storyboard in Resources */,
+				950DE97D1EB8757F001D6BD5 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BC7FF68C75EE97EE71DCEAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A901E0B0DEBE776F45B54C69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lacak Jajan/Pods-Lacak Jajan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11D733DE73D0AD9405420C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lacak Jajan/Pods-Lacak Jajan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95D981271EB3158C00584DFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B379971EC6A090009C1385 /* Users.swift in Sources */,
+				95C68BE71EE56A730092F512 /* TransferViewController.swift in Sources */,
+				95168FA11EDBB5C4002EC1AE /* HistoryCell.swift in Sources */,
+				95D9812F1EB3158C00584DFE /* AppDelegate.swift in Sources */,
+				95DEB1371EC6B24C00B59AED /* TaskViewController.swift in Sources */,
+				95F082401EE82BF200C5C870 /* SettingViewController.swift in Sources */,
+				95A9E0021EDD525D00D1DCF3 /* bg.swift in Sources */,
+				95168F9F1EDBB599002EC1AE /* HistoryViewController.swift in Sources */,
+				95A9E0041EDED77200D1DCF3 /* JajanViewController.swift in Sources */,
+				95C68BE91EE56C050092F512 /* SplashViewController.swift in Sources */,
+				950DE9821EB875E3001D6BD5 /* RootViewController.swift in Sources */,
+				95C68BEF1EE5CDAE0092F512 /* DapetDuitViewController.swift in Sources */,
+				95C68BEB1EE57EF40092F512 /* TarikDuitViewController.swift in Sources */,
+				95C68BED1EE57F060092F512 /* NabungViewController.swift in Sources */,
+				95FDB38D1EEA43CE0099EA1E /* Historys.swift in Sources */,
+				95C68BF11EE6FAFF0092F512 /* Extensions.swift in Sources */,
+				95FDB38F1EEA9CC00099EA1E /* HistoryDetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		95D981371EB3158C00584DFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D981381EB3158C00584DFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95D9813B1EB3158C00584DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95D9813C1EB3158C00584DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D9813E1EB3158C00584DFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9839B747FC5BBA76B187A0A9 /* Pods-Lacak Jajan.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YT7DMFF6ER;
+				INFOPLIST_FILE = "Lacak Jajan/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tommyzki.Lacak-Jajan";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		95D9813F1EB3158C00584DFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E62B06946B48C6A243356A /* Pods-Lacak Jajan.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YT7DMFF6ER;
+				INFOPLIST_FILE = "Lacak Jajan/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tommyzki.Lacak-Jajan";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95D981261EB3158C00584DFE /* Build configuration list for PBXProject "Lacak Jajan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9813B1EB3158C00584DFE /* Debug */,
+				95D9813C1EB3158C00584DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9813D1EB3158C00584DFE /* Build configuration list for PBXNativeTarget "Lacak Jajan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9813E1EB3158C00584DFE /* Debug */,
+				95D9813F1EB3158C00584DFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95D981231EB3158C00584DFE /* Project object */;
+}
