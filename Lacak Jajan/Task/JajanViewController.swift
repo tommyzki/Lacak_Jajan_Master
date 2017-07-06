@@ -19,20 +19,17 @@ class JajanViewController: UIViewController {
     @IBOutlet weak var viewCenterCons: NSLayoutConstraint!
     
     @IBOutlet weak var nominalUang: UITextField!
-    
     @IBOutlet weak var deskripsi: UITextField!
     
     @IBAction func jajanButtonTapped(_ sender: Any) {
         
         let username = userzat.username
-        
         guard let valuez = nominalUang.text, valuez.characters.count > 0 else {
             self.showAlert("Nominal cannot be empty.", title: "Error")
             return
         }
         
         let deskrip = deskripsi.text
-        
         if (Int(valuez)! < userzat.kas) {
             
             let value: String = "\(userzat.kas - Int(valuez)! )"
@@ -41,9 +38,7 @@ class JajanViewController: UIViewController {
             userzat.updateUser(username: username, params: params, value: value, completed: { (success) -> Void in
                 
                 if success { // this will be equal to whatever value is set in this method call
-                    
                     self.historyzat.addHistory(addusername: username, addtype: "Jajan", adddesc: deskrip!, addnominal: valuez , completed: { (success) -> Void in
-                        
                         self.view.endEditing(true)
                         SVProgressHUD.dismiss()
                         
@@ -53,13 +48,10 @@ class JajanViewController: UIViewController {
                             if let delegate = self.jajanDelegate {
                                 delegate.table2WillDismissed()
                             }
-                            
-                            
                         } else {
                             self.showAlert("Error Gagal melakukan jajan", title: "Error")
                         }
                     })
-                    
                 } else {
                     self.showAlert("Error Gagal melakukan jajan", title: "Error")
                 }
@@ -67,17 +59,16 @@ class JajanViewController: UIViewController {
         } else {
             self.showAlert("Jumlah Kas Lebih kecil dari jumlah yang di input", title: "Error")
         }
-
+    }
+    
+    @IBAction func bgButtonTapped(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        
-       
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,16 +76,8 @@ class JajanViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    // MARK: - Keyboard Setting
     
     func keyboardNotification(notification: NSNotification) {
         if let userInfo = notification.userInfo {
@@ -117,22 +100,12 @@ class JajanViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         self.view.endEditing(true)
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
-        
         return true
-        
-    }
-
-    @IBAction func bgButtonTapped(_ sender: Any) {
-        
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
 }

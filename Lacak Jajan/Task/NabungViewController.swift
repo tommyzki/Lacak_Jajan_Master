@@ -19,7 +19,6 @@ class NabungViewController: UIViewController {
     
     @IBOutlet weak var nominalUang: UITextField!
     
-    
     @IBAction func tabungButtonTapped(_ sender: Any) {
         
         let username = userzat.username
@@ -39,13 +38,10 @@ class NabungViewController: UIViewController {
             userzat.updateUser(username: username, params: kasparam, value: kasvalue, completed: { (success) -> Void in
                 
                 if success { // this will be equal to whatever value is set in this method call
-                    
                     self.userzat.updateUser(username: username, params: tabunganparam, value: tabunganvalue, completed: { (success) -> Void in
-                        
                         if success { // this will be equal to whatever value is set in this method call
-                            
                             self.historyzat.addHistory(addusername: username, addtype: "Nabung", adddesc: "", addnominal: valuez , completed: { (success) -> Void in
-                                
+
                                 self.view.endEditing(true)
                                 SVProgressHUD.dismiss()
                                 
@@ -55,27 +51,25 @@ class NabungViewController: UIViewController {
                                     if let delegate = self.nabungDelegate {
                                         delegate.table2WillDismissed()
                                     }
-                                    
-                                    
                                 } else {
                                     self.showAlert("Error Gagal melakukan tarik uang", title: "Error")
                                 }
                             })
-                            
                         } else {
                             self.showAlert("Error Gagal melakukan nabung", title: "Error")
                         }
                     })
-                    
                 } else {
                     self.showAlert("Error Gagal melakukan nabung", title: "Error")
                 }
             })
-            
         } else {
             self.showAlert("Jumlah Kas Lebih kecil dari jumlah yang di Tabung", title: "Error")
         }
-
+    }
+    
+    @IBAction func bgButtonTapped(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -114,23 +108,14 @@ class NabungViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         self.view.endEditing(true)
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
-        
         return true
-        
     }
-    @IBAction func bgButtonTapped(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-
-
+    
 }
 
 protocol NabungDelegate {

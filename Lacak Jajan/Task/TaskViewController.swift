@@ -23,12 +23,14 @@ class TaskViewController: UIViewController, Table2Delegate, NabungDelegate, Tari
         viewDidAppear(false)
     }
     
+    func refreshpage() {
+        viewDidAppear(false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         view.addBackground()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,8 +38,8 @@ class TaskViewController: UIViewController, Table2Delegate, NabungDelegate, Tari
         let username = UserDefaults.standard.object(forKey: "userzat") as! String
         
         userzat.loadUser(loginusername: username,completed: { (success) -> Void in
-            
             SVProgressHUD.dismiss()
+            
             if success { // this will be equal to whatever value is set in this method call
                 
                 
@@ -53,24 +55,17 @@ class TaskViewController: UIViewController, Table2Delegate, NabungDelegate, Tari
                 self.showAlert("Gagal Load Data", title: "Error")
             }
         })
-
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func refreshpage() {
-        viewDidAppear(false)
     }
 
     // MARK: - Navigation
     
     @IBAction func jajanButtonTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "JajanSegue", sender: nil)
-        
     }
 
     @IBAction func transferButtonTapped(_ sender: Any) {
@@ -81,7 +76,6 @@ class TaskViewController: UIViewController, Table2Delegate, NabungDelegate, Tari
         self.performSegue(withIdentifier: "TarikSegue", sender: nil)
     }
     
-
     @IBAction func nabungButtonTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "NabungSegue", sender: nil)
     }

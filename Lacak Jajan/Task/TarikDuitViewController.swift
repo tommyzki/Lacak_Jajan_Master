@@ -38,13 +38,9 @@ class TarikDuitViewController: UIViewController {
             userzat.updateUser(username: username, params: kasparam, value: kasvalue, completed: { (success) -> Void in
                 
                 if success { // this will be equal to whatever value is set in this method call
-                    
                     self.userzat.updateUser(username: username, params: tabunganparam, value: tabunganvalue, completed: { (success) -> Void in
-                        
                         if success { // this will be equal to whatever value is set in this method call
-                            
                             self.historyzat.addHistory(addusername: username, addtype: "Tarik Duit", adddesc: "", addnominal: valuez , completed: { (success) -> Void in
-                                
                                 self.view.endEditing(true)
                                 SVProgressHUD.dismiss()
                                 
@@ -54,36 +50,29 @@ class TarikDuitViewController: UIViewController {
                                     if let delegate = self.tarikDelegate {
                                         delegate.table2WillDismissed()
                                     }
-                                    
-                                    
                                 } else {
                                     self.showAlert("Error Gagal melakukan tarik uang", title: "Error")
                                 }
                             })
-                            
                         } else {
                             self.showAlert("Error Gagal melakukan tarik uang", title: "Error")
                         }
                     })
-                    
                 } else {
                     self.showAlert("Error Gagal melakukan tarik uang", title: "Error")
                 }
             })
-            
-            
         } else {
             self.showAlert("Jumlah Tabungan Lebih kecil dari jumlah yang di Tarik", title: "Error")
         }
-        
-        
     }
 
+    @IBAction func bgButtonTapped(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardNotification(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
@@ -91,7 +80,6 @@ class TarikDuitViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // MARK: - Navigation Keyboard
     
@@ -116,23 +104,14 @@ class TarikDuitViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         self.view.endEditing(true)
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
-        
         return true
-        
     }
-    @IBAction func bgButtonTapped(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-
-
+    
 }
 
 protocol TarikDelegate {

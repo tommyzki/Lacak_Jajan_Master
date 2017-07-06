@@ -28,6 +28,7 @@ class Historys{
             
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling GET")
                 print(response.result.error!)
@@ -38,36 +39,16 @@ class Historys{
             
             if let arrayDict = json.value as? [JSONStandart] {
                 
-                
-            
                 if (arrayDict.count > 0){
                     self._dictData = arrayDict
                 } else {
                     self._dictData = [["unknown":"unknown" as AnyObject]]
                 }
                 kembalian = true
-                
             }
             completed(kembalian)
         })
     }
-    
-    func randomString(length: Int) -> String {
-        
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        let len = UInt32(letters.length)
-        
-        var randomString = ""
-        
-        for _ in 0 ..< length {
-            let rand = arc4random_uniform(len)
-            var nextChar = letters.character(at: Int(rand))
-            randomString += NSString(characters: &nextChar, length: 1) as String
-        }
-        
-        return randomString
-    }
-    
     
     func addHistory(addusername: String, addtype: String, adddesc: String, addnominal: String, completed: @escaping (Bool)->()) {
         
@@ -93,6 +74,7 @@ class Historys{
             
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling POST")
                 print(response.result.error!)
@@ -100,12 +82,7 @@ class Historys{
             }
             
             // Set Users
-            let json = response.result
-            
-            print(json)
-            
             kembalian = true
-            
             completed(kembalian)
         })
         
@@ -123,6 +100,7 @@ class Historys{
             
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling POST")
                 print(response.result.error!)
@@ -130,14 +108,26 @@ class Historys{
             }
             
             // Set Users
-            let json = response.result
-            
-            print(json)
-            
             kembalian = true
-            
             completed(kembalian)
         })
+    }
+    
+    // MARK: - Generate Random Number
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
     }
     
 }

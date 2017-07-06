@@ -15,13 +15,27 @@ class SettingViewController: UIViewController {
     let historyzat = Historys()
 
     @IBOutlet weak var fullNameText: UILabel!
+    
+    @IBAction func clearHistoryButtonTapped(_ sender: Any) {
+        
+        historyzat.clearHistory(completed: { (success) -> Void in
+            SVProgressHUD.dismiss()
+            if success { // this will be equal to whatever value is set in this method call
+                self.showAlert("Success, history berhasil di hapus", title: "Success")
+            } else {
+                self.showAlert("Gagal Load Data", title: "Error")
+            }
+        })
+    }
+    
+    @IBAction func signOutButtonTapped(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "userzat")
+        performSegue(withIdentifier: "rootSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         view.addBackground()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,12 +43,9 @@ class SettingViewController: UIViewController {
         let username = UserDefaults.standard.object(forKey: "userzat") as! String
         
         userzat.loadUser(loginusername: username,completed: { (success) -> Void in
-            
             SVProgressHUD.dismiss()
             if success { // this will be equal to whatever value is set in this method call
-                
                 self.fullNameText.text = self.userzat.fullname
-                
             } else {
                 self.showAlert("Gagal Load Data", title: "Error")
             }
@@ -46,40 +57,10 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func clearHistoryButtonTapped(_ sender: Any) {
-        
-        historyzat.clearHistory(completed: { (success) -> Void in
-            
-            SVProgressHUD.dismiss()
-            if success { // this will be equal to whatever value is set in this method call
-                
-                self.showAlert("Success, history berhasil di hapus", title: "Success")
-
-                
-            } else {
-                self.showAlert("Gagal Load Data", title: "Error")
-            }
-        })
-        
-    }
-    
-    @IBAction func signOutButtonTapped(_ sender: Any) {
-        
-        UserDefaults.standard.removeObject(forKey: "userzat")
-        
-        performSegue(withIdentifier: "rootSegue", sender: self)
-
-        
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "rootSegue" {
             let _ = segue.destination as! RootViewController
         }
-        
     }
-
 
 }

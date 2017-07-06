@@ -36,6 +36,7 @@ class Users{
         return _tabungan ?? 0
     }
     
+    // Mark: - Load User Data
     func loadUser(loginusername: String, completed: @escaping (Bool)->()) {
         let todoEndpoint: String = "http://ayononton.esy.es/lacak_jajan/user.php?username=\(loginusername)"
         var kembalian = false
@@ -44,6 +45,7 @@ class Users{
             
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling GET")
                 print(response.result.error!)
@@ -72,9 +74,8 @@ class Users{
             completed(kembalian)
         })
     }
-
     
-    
+    // Mark: - Login Authenticate User Data
     func loginUser(loginusername: String, loginpassword: String, completed: @escaping (Bool)->()) {
         
         let todoEndpoint: String = "http://ayononton.esy.es/lacak_jajan/user.php?username=\(loginusername)"
@@ -84,6 +85,7 @@ class Users{
                 
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling GET")
                 print(response.result.error!)
@@ -118,6 +120,7 @@ class Users{
         })
     }
     
+    // Mark: - Register User Data and Post to Host
     func registerUser(regusername: String, regpassword: String, regemail: String, regfullname: String, completed: @escaping (Bool)->()) {
         
         let todoEndpoint: String = "http://ayononton.esy.es/lacak_jajan/user.php"
@@ -125,11 +128,10 @@ class Users{
         SVProgressHUD.show()
         
         let parameters: Parameters = ["username": regusername , "password":regpassword, "email":regemail, "fullname":regfullname]
-        
         Alamofire.request(todoEndpoint, method: .post, parameters: parameters).responseJSON(completionHandler: { response in
-            
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling POST")
                 print(response.result.error!)
@@ -137,17 +139,13 @@ class Users{
             }
             
             // Set Users
-            let json = response.result
-            
-            print(json)
-            
             kembalian = true
-            
             completed(kembalian)
         })
         
     }
     
+    // Mark : - Update User Data
     func updateUser(username: String, params: String, value: String, completed: @escaping (Bool)->()) {
         
         let todoEndpoint: String = "http://ayononton.esy.es/lacak_jajan/updateUser.php"
@@ -160,6 +158,7 @@ class Users{
             
             // check for errors
             guard response.result.error == nil else {
+                SVProgressHUD.dismiss()
                 // got an error in getting the data, need to handle it
                 print("error calling POST")
                 print(response.result.error!)
@@ -167,12 +166,7 @@ class Users{
             }
             
             // Set Users
-            let json = response.result
-            
-            print(json)
-            
             kembalian = true
-            
             completed(kembalian)
         })
         

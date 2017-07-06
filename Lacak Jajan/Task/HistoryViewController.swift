@@ -18,31 +18,23 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         let username = UserDefaults.standard.object(forKey: "userzat") as! String
         
-        historyzat.loadHistory(loginusername: username, completed: { (success) -> Void in
-            
+        historyzat.loadHistory(loginusername: username, completed: {
+            (success) -> Void in
             SVProgressHUD.dismiss()
+            
             if success { // this will be equal to whatever value is set in this method call
-                
-                //print(self.historyzat.dictData[0]["nominal"] ?? "")
-                
                 self.tableViewCons.reloadData()
-                
             } else {
                 self.showAlert("Gagal Load Data", title: "Error")
             }
         })
-
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,16 +42,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - Table View Data Source
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -76,7 +59,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         var rupiah = "0"
         if let nominal = self.historyzat.dictData[indexPath.row]["nominal"] as? Int {
             
-            //print(self.historyzat.dictData[indexPath.row])
             
             let rupiahTemp: Money = (Money(nominal))
             rupiah = "\(rupiahTemp)"
@@ -116,12 +98,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    // MARK: - Table View Delegate
+    
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        
-        
         performSegue(withIdentifier: "toDetailsSegue", sender: indexPath)
-        
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -133,8 +116,5 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             detailsViewController.dataHistory = self.historyzat.dictData[myIndexPath.row]
             
         }
-        
-        
     }
-
 }

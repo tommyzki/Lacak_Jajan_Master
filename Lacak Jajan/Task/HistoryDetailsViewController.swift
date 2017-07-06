@@ -11,7 +11,6 @@ import Money
 
 class HistoryDetailsViewController: UIViewController {
     
-    
     var dataHistory: [String: AnyObject]?
     
     @IBOutlet weak var historyDateText: UILabel!
@@ -32,10 +31,8 @@ class HistoryDetailsViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         
         if ((dataHistory) != nil) {
-            //print(dataHistory!)
             
             var rupiah = "0"
-            
             let rupiahTemp: Money = (Money(minorUnits:(dataHistory?["nominal"] as? Int)!))
             rupiah = "\(rupiahTemp)"
             
@@ -69,8 +66,6 @@ class HistoryDetailsViewController: UIViewController {
             historyNominalText.textColor = textColor
             
         }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,15 +73,4 @@ class HistoryDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
