@@ -91,25 +91,27 @@ class Users{
             }
             // Set Users
             let json = response.result
-            
-            
-            if let arrayDict = json.value as? [JSONStandart],
-                let username = arrayDict[0]["username"] as? String,
-                let password = arrayDict[0]["password"] as? String,
-                let email = arrayDict[0]["email"] as? String,
-                let fullname = arrayDict[0]["fullname"] as? String,
-                let kas = arrayDict[0]["kas"] as? Int,
-                let tabungan = arrayDict[0]["tabungan"] as? Int  {
+            let arrayDicts = json.value as? [JSONStandart]
+            if arrayDicts?.count != 0 {
                 
-                
-                if (username == loginusername && password == loginpassword){
-                    self._username = username
-                    self._password = password
-                    self._email = email
-                    self._fullname = fullname
-                    self._kas = kas
-                    self._tabungan = tabungan
-                    kembalian = true
+                if let arrayDict = json.value as? [JSONStandart],
+                    let username = arrayDict[0]["username"] as? String,
+                    let password = arrayDict[0]["password"] as? String,
+                    let email = arrayDict[0]["email"] as? String,
+                    let fullname = arrayDict[0]["fullname"] as? String,
+                    let kas = arrayDict[0]["kas"] as? Int,
+                    let tabungan = arrayDict[0]["tabungan"] as? Int  {
+                    
+                    
+                    if (username == loginusername && password == loginpassword){
+                        self._username = username
+                        self._password = password
+                        self._email = email
+                        self._fullname = fullname
+                        self._kas = kas
+                        self._tabungan = tabungan
+                        kembalian = true
+                    }
                 }
             }
             completed(kembalian)
