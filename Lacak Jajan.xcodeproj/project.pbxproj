@@ -16,6 +16,8 @@
 		95168F9F1EDBB599002EC1AE /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95168F9E1EDBB599002EC1AE /* HistoryViewController.swift */; };
 		95168FA11EDBB5C4002EC1AE /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95168FA01EDBB5C4002EC1AE /* HistoryCell.swift */; };
 		954CA7971ECFDB1400EF1618 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954CA7961ECFDB1400EF1618 /* Task.storyboard */; };
+		957DEC981F1497FE00FD9760 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DEC971F1497FE00FD9760 /* UserObject.swift */; };
+		957DEC9A1F149DCE00FD9760 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DEC991F149DCE00FD9760 /* Application.swift */; };
 		95A9E0021EDD525D00D1DCF3 /* bg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A9E0011EDD525D00D1DCF3 /* bg.swift */; };
 		95A9E0041EDED77200D1DCF3 /* JajanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A9E0031EDED77200D1DCF3 /* JajanViewController.swift */; };
 		95B379971EC6A090009C1385 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B379961EC6A090009C1385 /* Users.swift */; };
@@ -47,6 +49,8 @@
 		95168F9E1EDBB599002EC1AE /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Task/HistoryViewController.swift; sourceTree = "<group>"; };
 		95168FA01EDBB5C4002EC1AE /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCell.swift; path = Task/HistoryCell.swift; sourceTree = "<group>"; };
 		954CA7961ECFDB1400EF1618 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Task.storyboard; path = Task/Task.storyboard; sourceTree = "<group>"; };
+		957DEC971F1497FE00FD9760 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserObject.swift; path = Model/UserObject.swift; sourceTree = "<group>"; };
+		957DEC991F149DCE00FD9760 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Main/Application.swift; sourceTree = "<group>"; };
 		95A9E0011EDD525D00D1DCF3 /* bg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = bg.swift; path = Model/bg.swift; sourceTree = "<group>"; };
 		95A9E0031EDED77200D1DCF3 /* JajanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JajanViewController.swift; path = Task/JajanViewController.swift; sourceTree = "<group>"; };
 		95B379961EC6A090009C1385 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Users.swift; path = Model/Users.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				950DE97F1EB875B6001D6BD5 /* Main.storyboard */,
 				950DE9811EB875E3001D6BD5 /* RootViewController.swift */,
 				95C68BF01EE6FAFF0092F512 /* Extensions.swift */,
+				957DEC991F149DCE00FD9760 /* Application.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -129,8 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				95A9E0011EDD525D00D1DCF3 /* bg.swift */,
-				95B379961EC6A090009C1385 /* Users.swift */,
 				95FDB38C1EEA43CD0099EA1E /* Historys.swift */,
+				95B379961EC6A090009C1385 /* Users.swift */,
+				957DEC971F1497FE00FD9760 /* UserObject.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				95B379971EC6A090009C1385 /* Users.swift in Sources */,
 				95C68BE71EE56A730092F512 /* TransferViewController.swift in Sources */,
 				95168FA11EDBB5C4002EC1AE /* HistoryCell.swift in Sources */,
+				957DEC9A1F149DCE00FD9760 /* Application.swift in Sources */,
 				95D9812F1EB3158C00584DFE /* AppDelegate.swift in Sources */,
 				95DEB1371EC6B24C00B59AED /* TaskViewController.swift in Sources */,
 				95F082401EE82BF200C5C870 /* SettingViewController.swift in Sources */,
@@ -320,6 +327,7 @@
 				95A9E0041EDED77200D1DCF3 /* JajanViewController.swift in Sources */,
 				95C68BE91EE56C050092F512 /* SplashViewController.swift in Sources */,
 				950DE9821EB875E3001D6BD5 /* RootViewController.swift in Sources */,
+				957DEC981F1497FE00FD9760 /* UserObject.swift in Sources */,
 				95C68BEF1EE5CDAE0092F512 /* DapetDuitViewController.swift in Sources */,
 				95C68BEB1EE57EF40092F512 /* TarikDuitViewController.swift in Sources */,
 				95C68BED1EE57F060092F512 /* NabungViewController.swift in Sources */,

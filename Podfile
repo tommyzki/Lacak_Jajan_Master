@@ -7,7 +7,9 @@ target 'Lacak Jajan' do
 
   # Pods for Lacak Jajan
   pod 'Alamofire’, ‘~> 4.4’
-  pod 'SVProgressHUD', '~> 2.1'
   pod 'Money', '~> 2.0'
+  pod 'SVProgressHUD', '~> 2.1'
+  pod 'SwiftyJSON'
+  pod 'Unbox'
 
 end

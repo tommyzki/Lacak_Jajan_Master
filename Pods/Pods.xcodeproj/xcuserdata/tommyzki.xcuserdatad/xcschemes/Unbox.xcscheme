@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '839622866AF5DEB057B9104ED3A3E109'
-               BlueprintName = 'SVProgressHUD'
+               BlueprintIdentifier = 'D83E8CADDC0860D1FDF3AFB84EF49395'
+               BlueprintName = 'Unbox'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SVProgressHUD.framework'>
+               BuildableName = 'Unbox.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

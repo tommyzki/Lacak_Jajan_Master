@@ -3,19 +3,25 @@ PODS:
   - Money (2.0.1):
     - ValueCoding (~> 2)
   - SVProgressHUD (2.1.2)
+  - SwiftyJSON (3.1.4)
+  - Unbox (2.5.0)
   - ValueCoding (2.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Money (~> 2.0)
   - SVProgressHUD (~> 2.1)
+  - SwiftyJSON
+  - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Money: 6faa689f86c455112971c900e8a31fa0b9c02365
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
   ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
 
-PODFILE CHECKSUM: 5064fb7c5cd75cbbc920c976173ac17a05009a77
+PODFILE CHECKSUM: 8d3bd07b5936c51c2e0bcdf33a26620e94ae55cf
 
 COCOAPODS: 1.2.0
