@@ -13,6 +13,8 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
 
     let userzat = Users()
     
+    var userObject: UserObject = UserObject()
+    
     @IBOutlet weak var regLogView: UIView!
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var registerView: UIView!
@@ -28,6 +30,31 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var regPasswordText: UITextField!
     
     var animationOnAppearEnabled = true
+    
+    func loginAndFetchData(username: String, password: String) {
+        
+        UserObject.fetchUserData(username: username, result: { (result, error) in
+            self.view.endEditing(true)
+            SVProgressHUD.dismiss()
+            if let userObject = result {
+                print(userObject.password)
+                if (userObject.password == password) {
+                    self.userObject = userObject
+                    UserDefaults.standard.set(userObject.username, forKey: "userzat")
+                    self.performSegue(withIdentifier: "taskSegue", sender: userObject)
+                } else {
+                    self.showAlert("Username / Password Salah", title: "Error", okAction: {
+                        self.loginPasswordText.text = ""
+                    })
+                }
+            } else if let error = error {
+                print(error)
+                self.showAlert("Username / Password Salah", title: "Error", okAction: {
+                    self.loginPasswordText.text = ""
+                })
+            }
+        })
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -107,18 +134,20 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        userzat.loginUser(loginusername: username, loginpassword: password,completed: { (success) -> Void in
-            
-            self.view.endEditing(true)
-            SVProgressHUD.dismiss()
-            if success { // this will be equal to whatever value is set in this method call
-                UserDefaults.standard.set(self.userzat.username, forKey: "userzat")
-                
-                self.performSegue(withIdentifier: "taskSegue", sender: nil)
-            } else {
-                self.showAlert("Username / Password Salah", title: "Error")
-            }
-        })
+        loginAndFetchData(username: username, password: password)
+        
+//        userzat.loginUser(loginusername: username, loginpassword: password,completed: { (success) -> Void in
+//            
+//            self.view.endEditing(true)
+//            SVProgressHUD.dismiss()
+//            if success { // this will be equal to whatever value is set in this method call
+//                UserDefaults.standard.set(self.userzat.username, forKey: "userzat")
+//                
+//                self.performSegue(withIdentifier: "taskSegue", sender: nil)
+//            } else {
+//                self.showAlert("Username / Password Salah", title: "Error")
+//            }
+//        })
     }
     
     
@@ -201,15 +230,21 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "taskSegue" {
-            let tabCtrl       = segue.destination as! UITabBarController
+            let tabCtrl = segue.destination as! UITabBarController
             let vc1 = tabCtrl.viewControllers![0] as! UINavigationController
             vc1.title = "Home"
+            
+            let vcx1 = vc1.viewControllers.first as! TaskViewController
+            vcx1.userObject = self.userObject
             
             let vc2 = tabCtrl.viewControllers![1] as! UINavigationController
             vc2.title = "History"
             
             let vc3 = tabCtrl.viewControllers![2] as! UINavigationController
             vc3.title = "Other"
+            
+            let vcx3 = vc3.viewControllers.first as! SettingViewController
+            vcx3.userObject = self.userObject
             
         }
     }

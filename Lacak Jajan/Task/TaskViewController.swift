@@ -13,6 +13,7 @@ import Money
 class TaskViewController: UIViewController, Table2Delegate, NabungDelegate, TarikDelegate, TransferDelegate, JajanDelegate {
     
     let userzat = Users()
+    var userObject: UserObject = UserObject()
 
     @IBOutlet weak var saldoKasUser: UILabel!
     

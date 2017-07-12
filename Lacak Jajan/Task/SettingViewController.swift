@@ -13,6 +13,7 @@ class SettingViewController: UIViewController {
     
     let userzat = Users()
     let historyzat = Historys()
+    var userObject: UserObject = UserObject()
 
     @IBOutlet weak var fullNameText: UILabel!
     

@@ -9,6 +9,8 @@
 import UIKit
 
 class RootViewController: UIViewController {
+    
+    var userObject: UserObject = UserObject()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,13 +18,27 @@ class RootViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func fetchUserData(username: String) {
+        
+        UserObject.fetchUserData(username: username, result: { (result, error) in
+            if let userObject = result {
+                self.userObject = userObject
+                self.performSegue(withIdentifier: "taskSegue", sender: userObject)
+            } else if let error = error {
+                print(error)
+                self.showAlert(error as? String, title: "Error", okAction: {
+                })
+            }
+        })
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         
 
         
     
-        if let _ = UserDefaults.standard.object(forKey: "userzat") {
-            performSegue(withIdentifier: "taskSegue", sender: self)
+        if let username = UserDefaults.standard.object(forKey: "userzat") {
+            fetchUserData(username: username as! String)
         } else {
             
             performSegue(withIdentifier: "splashSegue", sender: self)
@@ -52,6 +68,5 @@ class RootViewController: UIViewController {
             let vc3 = tabCtrl.viewControllers![2] as! UINavigationController
             vc3.title = "Other"
         }
-        
     }
 }
