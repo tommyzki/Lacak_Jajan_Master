@@ -22,11 +22,12 @@ var URLService: String {
 
 let taskDefault   = "task"
 let fetchUserDataDefault = "fetchUserData"
+let createUserDefault = "createNewUser"
 
 struct Application {
     struct Url {
         struct Service {
-            static let local   = "http://localhost/mobile/lacak_jajan/userObject.php"
+            static let local   = "http://10.41.0.112/mobile/lacak_jajan/userObject.php"
             static let hosting = "http://ayononton.esy.es/lacak_jajan/"
         }
     }
