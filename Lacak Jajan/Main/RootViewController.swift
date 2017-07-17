@@ -37,8 +37,8 @@ class RootViewController: UIViewController {
 
         
     
-        if let username = UserDefaults.standard.object(forKey: "userzat") {
-            fetchUserData(username: username as! String)
+        if let username = UserDefaults.standard.object(forKey: "userzat") as? String {
+            fetchUserData(username: username)
         } else {
             
             performSegue(withIdentifier: "splashSegue", sender: self)
@@ -61,12 +61,16 @@ class RootViewController: UIViewController {
             let tabCtrl = segue.destination as! UITabBarController
             let vc1 = tabCtrl.viewControllers![0] as! UINavigationController
             vc1.title = "Home"
+            let taskVC = vc1.viewControllers.first as! TaskViewController
+            taskVC.userObject = userObject
             
             let vc2 = tabCtrl.viewControllers![1] as! UINavigationController
             vc2.title = "History"
             
             let vc3 = tabCtrl.viewControllers![2] as! UINavigationController
             vc3.title = "Other"
+            let settingVC = vc3.viewControllers.first as! SettingViewController
+            settingVC.userObject = userObject
         }
     }
 }
