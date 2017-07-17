@@ -60,5 +60,18 @@ class UserObject: Unboxable {
         }
     }
     
+    static func createNewUser(username: String, password: String, email: String, fullname: String, result: UserObjectResultHandler?){
+        let params: Parameters = [taskDefault: createUserDefault, SerializationKeys.username: username, SerializationKeys.password: password, SerializationKeys.email: email, SerializationKeys.fullname: fullname]
+        
+        Alamofire.request(URLService, method: .post, parameters: params).responseJSON { response in
+            let (dictionary, error) = Application.validateResponse(response)
+            if let _ = dictionary {
+                result?(true, nil)
+            } else {
+                result?(false, error)
+            }
+        }
+    }
+    
 }
 

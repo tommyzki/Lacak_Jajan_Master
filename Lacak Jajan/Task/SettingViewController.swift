@@ -41,16 +41,20 @@ class SettingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let username = UserDefaults.standard.object(forKey: "userzat") as! String
         
-        userzat.loadUser(loginusername: username,completed: { (success) -> Void in
-            SVProgressHUD.dismiss()
-            if success { // this will be equal to whatever value is set in this method call
-                self.fullNameText.text = self.userzat.fullname
-            } else {
-                self.showAlert("Gagal Load Data", title: "Error")
-            }
-        })
+        fullNameText.text = userObject.fullname
+        
+        
+        //let username = UserDefaults.standard.object(forKey: "userzat") as! String
+        
+//        userzat.loadUser(loginusername: username,completed: { (success) -> Void in
+//            SVProgressHUD.dismiss()
+//            if success { // this will be equal to whatever value is set in this method call
+//                self.fullNameText.text = self.userzat.fullname
+//            } else {
+//                self.showAlert("Gagal Load Data", title: "Error")
+//            }
+//        })
     }
 
     override func didReceiveMemoryWarning() {

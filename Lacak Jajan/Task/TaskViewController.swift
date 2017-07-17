@@ -36,26 +36,37 @@ class TaskViewController: UIViewController, Table2Delegate, NabungDelegate, Tari
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let username = UserDefaults.standard.object(forKey: "userzat") as! String
+        let kasTemp: Money = (Money(userObject.kas))
+        let kasRupiah = "\(kasTemp)"
+
+        let tabunganTemp: Money = Money(userObject.tabungan)
+        let tabunganRupiah = "\(tabunganTemp)"
+
+        self.saldoKasUser.text = "\((kasRupiah))"//.substring(from: kasRupiah.index(after: kasRupiah.startIndex )))"
+        self.saldoTabunganUser.text = "\((tabunganRupiah))"//.substring(from: tabunganRupiah.index(after: tabunganRupiah.startIndex )))"
+
         
-        userzat.loadUser(loginusername: username,completed: { (success) -> Void in
-            SVProgressHUD.dismiss()
-            
-            if success { // this will be equal to whatever value is set in this method call
-                
-                
-                let kasTemp: Money = (Money(self.userzat.kas))
-                let kasRupiah = "\(kasTemp)"
-                
-                let tabunganTemp: Money = Money(self.userzat.tabungan)
-                let tabunganRupiah = "\(tabunganTemp)"
-                
-                self.saldoKasUser.text = "\((kasRupiah))"//.substring(from: kasRupiah.index(after: kasRupiah.startIndex )))"
-                self.saldoTabunganUser.text = "\((tabunganRupiah))"//.substring(from: tabunganRupiah.index(after: tabunganRupiah.startIndex )))"
-            } else {
-                self.showAlert("Gagal Load Data", title: "Error")
-            }
-        })
+        
+//        let username = UserDefaults.standard.object(forKey: "userzat") as! String
+//        
+//        userzat.loadUser(loginusername: username,completed: { (success) -> Void in
+//            SVProgressHUD.dismiss()
+//            
+//            if success { // this will be equal to whatever value is set in this method call
+//                
+//                
+//                let kasTemp: Money = (Money(self.userzat.kas))
+//                let kasRupiah = "\(kasTemp)"
+//                
+//                let tabunganTemp: Money = Money(self.userzat.tabungan)
+//                let tabunganRupiah = "\(tabunganTemp)"
+//                
+//                self.saldoKasUser.text = "\((kasRupiah))"//.substring(from: kasRupiah.index(after: kasRupiah.startIndex )))"
+//                self.saldoTabunganUser.text = "\((tabunganRupiah))"//.substring(from: tabunganRupiah.index(after: tabunganRupiah.startIndex )))"
+//            } else {
+//                self.showAlert("Gagal Load Data", title: "Error")
+//            }
+//        })
     }
 
     override func didReceiveMemoryWarning() {
