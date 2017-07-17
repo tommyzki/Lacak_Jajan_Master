@@ -31,7 +31,16 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
     
     var animationOnAppearEnabled = true
     
-    func loginAndFetchData(username: String, password: String) {
+    func loginAndFetchData() {
+        
+        guard let username = loginUsernameText.text, username.characters.count > 0 else {
+            self.showAlert("Username cannot be empty.", title: "Error")
+            return
+        }
+        guard let password = loginPasswordText.text, password.characters.count > 0 else {
+            self.showAlert("Password cannot be empty", title: "Error")
+            return
+        }
         
         UserObject.fetchUserData(username: username, result: { (result, error) in
             self.view.endEditing(true)
@@ -40,7 +49,7 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
                 print(userObject.password)
                 if (userObject.password == password) {
                     self.userObject = userObject
-                    UserDefaults.standard.set(userObject.username, forKey: "userzat")
+                    UserDefaults.standard.set(username, forKey: "userzat")
                     self.performSegue(withIdentifier: "taskSegue", sender: userObject)
                 } else {
                     self.showAlert("Username / Password Salah", title: "Error", okAction: {
@@ -49,11 +58,54 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
                 }
             } else if let error = error {
                 print(error)
-                self.showAlert("Username / Password Salah", title: "Error", okAction: {
-                    self.loginPasswordText.text = ""
-                })
+                if (error._code == 1){
+                    self.showAlert("Could not connect to the server. Please Try Again", title: "Error")
+                }
+                else {
+                    self.showAlert("Username / Password Salah", title: "Error", okAction: {
+                        self.loginPasswordText.text = ""
+                    })
+                }
             }
         })
+    }
+    
+    func registerUser() {
+        
+        guard let fullname = regLastNameText.text, fullname.characters.count > 0 else {
+            self.showAlert("Name cannot be empty.", title: "Error")
+            return
+        }
+        guard let email = regEmailText.text, email.characters.count > 0 else {
+            self.showAlert("Email cannot be empty.", title: "Error")
+            return
+        }
+        guard let username = regUsernameText.text, username.characters.count > 0 else {
+            self.showAlert("Username cannot be empty.", title: "Error")
+            return
+        }
+        guard let password = regPasswordText.text, password.characters.count > 0 else {
+            self.showAlert("Password cannot be empty", title: "Error")
+            return
+        }
+        
+        UserObject.createNewUser(username: username, password: password, email: email, fullname: fullname ) { success, error in
+            self.view.endEditing(true)
+            SVProgressHUD.dismiss()
+            if success {
+                self.showAlert("Your changes has been saved.", title: "Success") {
+                    self.bgButtonTapped(1)
+                }
+            } else if let error = error {
+                print(error)
+                if (error._code == 1){
+                    self.showAlert("Could not connect to the server. Please Try Again", title: "Error")
+                }
+                else {
+                    self.showAlert("\(error.localizedDescription)", title: "Error")
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,64 +174,25 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     @IBAction func logLoginButtonTapped(_ sender: Any) {
-        
-        guard let username = loginUsernameText.text, username.characters.count > 0 else {
-            self.showAlert("Username cannot be empty.", title: "Error")
-            return
-        }
-        guard let password = loginPasswordText.text else {
-            self.showAlert("Password cannot be empty", title: "Error")
-            return
-        }
-        
-        loginAndFetchData(username: username, password: password)
-        
-//        userzat.loginUser(loginusername: username, loginpassword: password,completed: { (success) -> Void in
-//            
-//            self.view.endEditing(true)
-//            SVProgressHUD.dismiss()
-//            if success { // this will be equal to whatever value is set in this method call
-//                UserDefaults.standard.set(self.userzat.username, forKey: "userzat")
-//                
-//                self.performSegue(withIdentifier: "taskSegue", sender: nil)
-//            } else {
-//                self.showAlert("Username / Password Salah", title: "Error")
-//            }
-//        })
+        loginAndFetchData()
     }
     
     
     @IBAction func regRegisterButtonTapped(_ sender: Any) {
-        guard let fullname = regLastNameText.text, fullname.characters.count > 0 else {
-            self.showAlert("Name cannot be empty.", title: "Error")
-            return
-        }
-        guard let email = regEmailText.text, email.characters.count > 0 else {
-            self.showAlert("Email cannot be empty.", title: "Error")
-            return
-        }
-        guard let username = regUsernameText.text, username.characters.count > 0 else {
-            self.showAlert("Username cannot be empty.", title: "Error")
-            return
-        }
-        guard let password = regPasswordText.text else {
-            self.showAlert("Password cannot be empty", title: "Error")
-            return
-        }
+        registerUser()
         
-        userzat.registerUser(regusername: username, regpassword: password, regemail: email, regfullname: fullname, completed: { (success) -> Void in
-            self.view.endEditing(true)
-            SVProgressHUD.dismiss()
-            if success { // this will be equal to whatever value is set in this method call
-                self.showAlert("Register successful. Please login.", title: "Success")
-                self.bgButtonTapped(1)
-                
-            } else {
-                self.showAlert("Error Gagal Membuat Akun", title: "Error")
-            }
-        })
+//        userzat.registerUser(regusername: username, regpassword: password, regemail: email, regfullname: fullname, completed: { (success) -> Void in
+//            self.view.endEditing(true)
+//            SVProgressHUD.dismiss()
+//            if success { // this will be equal to whatever value is set in this method call
+//                self.showAlert("Register successful. Please login.", title: "Success")
+//                self.bgButtonTapped(1)
+//                
+//            } else {
+//                self.showAlert("Error Gagal Membuat Akun", title: "Error")
+//            }
+//        })
         
     }
     
