@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import Unbox
+import SVProgressHUD
 
 class UserObject: Unboxable {
     
@@ -48,6 +49,7 @@ class UserObject: Unboxable {
     }
     
     static func fetchUserData(username: String, result: UserObjectFetchResultHandler?) {
+        SVProgressHUD.show()
         let params: Parameters = [taskDefault: fetchUserDataDefault, SerializationKeys.username: username]
         
         Alamofire.request(URLService, method: .post, parameters: params).responseJSON { response in
@@ -61,6 +63,7 @@ class UserObject: Unboxable {
     }
     
     static func createNewUser(username: String, password: String, email: String, fullname: String, result: UserObjectResultHandler?){
+        SVProgressHUD.show()
         let params: Parameters = [taskDefault: createUserDefault, SerializationKeys.username: username, SerializationKeys.password: password, SerializationKeys.email: email, SerializationKeys.fullname: fullname]
         
         Alamofire.request(URLService, method: .post, parameters: params).responseJSON { response in
