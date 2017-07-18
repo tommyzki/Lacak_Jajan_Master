@@ -10,10 +10,6 @@ import UIKit
 import SVProgressHUD
 
 class SplashViewController: UIViewController, UITextFieldDelegate {
-
-    let userzat = Users()
-    
-    var userObject: UserObject = UserObject()
     
     @IBOutlet weak var regLogView: UIView!
     @IBOutlet weak var loginView: UIView!
@@ -45,12 +41,12 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
         UserObject.fetchUserData(username: username, result: { (result, error) in
             self.view.endEditing(true)
             SVProgressHUD.dismiss()
-            if let userObject = result {
-                print(userObject.password)
-                if (userObject.password == password) {
-                    self.userObject = userObject
+            if let userObjects = result {
+                print(userObjects.password)
+                if (userObjects.password == password) {
+                    userObject = userObjects
                     UserDefaults.standard.set(username, forKey: "userzat")
-                    self.performSegue(withIdentifier: "taskSegue", sender: userObject)
+                    self.performSegue(withIdentifier: "taskSegue", sender: nil)
                 } else {
                     self.showAlert("Username / Password Salah", title: "Error", okAction: {
                         self.loginPasswordText.text = ""
@@ -182,18 +178,6 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
     @IBAction func regRegisterButtonTapped(_ sender: Any) {
         registerUser()
         
-//        userzat.registerUser(regusername: username, regpassword: password, regemail: email, regfullname: fullname, completed: { (success) -> Void in
-//            self.view.endEditing(true)
-//            SVProgressHUD.dismiss()
-//            if success { // this will be equal to whatever value is set in this method call
-//                self.showAlert("Register successful. Please login.", title: "Success")
-//                self.bgButtonTapped(1)
-//                
-//            } else {
-//                self.showAlert("Error Gagal Membuat Akun", title: "Error")
-//            }
-//        })
-        
     }
     
     // MARK: - Keyboard2
@@ -247,20 +231,11 @@ class SplashViewController: UIViewController, UITextFieldDelegate {
             let vc1 = tabCtrl.viewControllers![0] as! UINavigationController
             vc1.title = "Home"
             
-            let vcx1 = vc1.viewControllers.first as! TaskViewController
-            vcx1.userObject = self.userObject
-            
             let vc2 = tabCtrl.viewControllers![1] as! UINavigationController
             vc2.title = "History"
             
             let vc3 = tabCtrl.viewControllers![2] as! UINavigationController
             vc3.title = "Other"
-            
-            let vcx3 = vc3.viewControllers.first as! SettingViewController
-            vcx3.userObject = self.userObject
-            
         }
     }
-    
-
 }

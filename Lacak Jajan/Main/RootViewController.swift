@@ -9,8 +9,6 @@
 import UIKit
 
 class RootViewController: UIViewController {
-    
-    var userObject: UserObject = UserObject()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +19,9 @@ class RootViewController: UIViewController {
     func fetchUserData(username: String) {
         
         UserObject.fetchUserData(username: username, result: { (result, error) in
-            if let userObject = result {
-                self.userObject = userObject
-                self.performSegue(withIdentifier: "taskSegue", sender: userObject)
+            if let userObjects = result {
+                userObject = userObjects
+                self.performSegue(withIdentifier: "taskSegue", sender: nil)
             } else if let error = error {
                 print(error)
                 self.showAlert(error as? String, title: "Error", okAction: {
@@ -33,8 +31,6 @@ class RootViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-
         
     
         if let username = UserDefaults.standard.object(forKey: "userzat") as? String {
@@ -61,16 +57,12 @@ class RootViewController: UIViewController {
             let tabCtrl = segue.destination as! UITabBarController
             let vc1 = tabCtrl.viewControllers![0] as! UINavigationController
             vc1.title = "Home"
-            let taskVC = vc1.viewControllers.first as! TaskViewController
-            taskVC.userObject = userObject
             
             let vc2 = tabCtrl.viewControllers![1] as! UINavigationController
             vc2.title = "History"
             
             let vc3 = tabCtrl.viewControllers![2] as! UINavigationController
             vc3.title = "Other"
-            let settingVC = vc3.viewControllers.first as! SettingViewController
-            settingVC.userObject = userObject
         }
     }
 }
