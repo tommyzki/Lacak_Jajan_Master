@@ -20,6 +20,8 @@ var URLService: String {
     }
 }
 
+var userObject = UserObject()
+
 let taskDefault   = "task"
 let fetchUserDataDefault = "fetchUserData"
 let createUserDefault = "createNewUser"
